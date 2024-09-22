@@ -44,8 +44,8 @@
 		stroke-dashoffset: 361px;
 
 		transition:
-			stroke 0.25s ease var(--stroke-delay, 0s),
-			stroke-dasharray 0.35s;
+			stroke .25s ease var(--stroke-delay, 0s),
+			stroke-dasharray .5s;
 	}
 	a:hover {
 		--spacing: 4px;

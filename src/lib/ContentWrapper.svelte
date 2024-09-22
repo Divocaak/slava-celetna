@@ -1,6 +1,7 @@
 <script>
-	import AnimatedLink from '$lib/AnimatedLink.svelte';
+	import TextLink from '$lib/TextLink.svelte';
 
+	export let id;
 	export let title;
 	export let topText;
 	export let bottomText;
@@ -13,7 +14,7 @@
 	export let imgsLeft = false;
 </script>
 
-<div class="wrapper">
+<div class="wrapper" {id}>
 	{#if imgsLeft}
 		<div class="imgs-container left">
 			<img src={topImgSrc} alt={topImgAlt} />
@@ -21,9 +22,9 @@
 		</div>
 	{/if}
 	<div class="texts-container" class:left={imgsLeft}>
-		<h1>{title}</h1>
+		<h2>{title}</h2>
 		<p>{topText}</p>
-		<p>{@html bottomText} <AnimatedLink {href} text={linkText} /></p>
+		<p>{@html bottomText} <TextLink {href} text={linkText} /></p>
 	</div>
 	{#if !imgsLeft}<div class="imgs-container">
 			<img src={topImgSrc} alt={topImgAlt} />
@@ -38,8 +39,6 @@
 
 		padding: var(--py) var(--px);
 
-		background-color: var(--green);
-
 		display: flex;
 
 		overflow: hidden;
@@ -51,7 +50,7 @@
 		padding: 0 50px;
 	}
 
-	.texts-container h1 {
+	.texts-container h2 {
 		text-align: center;
 		text-transform: uppercase;
 	}
@@ -64,6 +63,13 @@
 	.imgs-container img {
 		position: absolute;
 		object-fit: cover;
+		transition: all 0.45s ease-in-out;
+		pointer-events: all;
+	}
+
+	.imgs-container img:hover {
+		transform: scale(1.05) rotate(2deg);
+		z-index: 2;
 	}
 
 	.imgs-container img:first-of-type {
@@ -86,5 +92,10 @@
 
 	.imgs-container.left img {
 		transform: scaleX(-1);
+	}
+
+	.imgs-container.left img:hover {
+		transform: scaleX(-1.05) scaleY(1.05) rotate(-2deg);
+		z-index: 2;
 	}
 </style>

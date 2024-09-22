@@ -1,4 +1,20 @@
+<script>
+	import ButtonLink from '$lib/ButtonLink.svelte';
+</script>
+
+<svelte:head>
+	<meta name="author" content="Vojtěch Divoký" />
+</svelte:head>
+
 <slot></slot>
+<p class="signature">
+	Developed by<ButtonLink
+		label="Vojtěch Divoký"
+		href="https://divokyvojtech.cz"
+		target="_blank"
+		uppercase={false}
+	/>&copy; 2024
+</p>
 
 <style>
 	:global(:root) {
@@ -10,12 +26,29 @@
 		--px: 5vw;
 	}
 
+	:global(body) {
+		background-color: var(--green);
+	}
+
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+
 	:global(html, div, body) {
 		margin: 0;
 		padding: 0;
 	}
 
-	:global(h1, h2, h3, p) {
+	:global(h1, h2, h3, p, b) {
 		color: var(--white);
+	}
+
+	.signature {
+		font-size: 0.75em;
+		position: relative;
+		right: 10px;
+		width: 100%;
+		text-align: end;
+		margin: 0;
 	}
 </style>
