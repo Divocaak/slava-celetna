@@ -43,6 +43,10 @@
 		color: var(--white);
 	}
 
+	:global(h1, h2, h3){
+		text-transform: uppercase;
+	}
+
 	.signature {
 		font-size: 0.75em;
 		position: relative;

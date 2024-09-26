@@ -1,0 +1,32 @@
+{
+    "5": {
+        "label": "amk definition",
+        "description": "Anna-Marie Křížová vystudovala fotografii a nyní se věnuje upcyclingu.\n\n\"Baví mě tvorba výstředních sak a nadčasových nódních kousků, což mi momentálně nejvíce umožňuje se kreativně vyjádřit.\n\nAutenticita je pro mě klíčová. Chci vyrábět jedinečnost a umožnit lidem se trošku odlišit.\"",
+        "web": "www.annakrizova.cz",
+        "instagram": "amk_definition",
+        "facebook": null,
+        "tileImage": "tile.jpg",
+        "topImage": "top.jpg",
+        "bottomImage": "bottom.jpg"
+    },
+    "9": {
+        "label": "lorem ipsum",
+        "description": "kajbdkasbd",
+        "web": "loremipsum.com",
+        "instagram": null,
+        "facebook": null,
+        "tileImage": "tile.jpg",
+        "topImage": "top.jpg",
+        "bottomImage": "bottom.jpg"
+    },
+    "3": {
+        "label": "dolor sit amet",
+        "description": "  af asdf asdgasdg asdg  agd ",
+        "web": null,
+        "instagram": "dhogh",
+        "facebook": null,
+        "tileImage": "tile.jpg",
+        "topImage": "top.jpg",
+        "bottomImage": "bottom.jpg"
+    }
+}
