@@ -4,9 +4,9 @@
 	export let id;
 	export let title;
 	export let topText;
-	export let bottomText;
-	export let linkText;
-	export let href;
+	export let bottomText = null;
+	export let linkText = null;
+	export let href = null;
 	export let topImgSrc;
 	export let topImgAlt = 'alt';
 	export let bottomImgSrc;
@@ -23,8 +23,18 @@
 	{/if}
 	<div class="texts-container" class:left={imgsLeft}>
 		<h2>{title}</h2>
-		<p>{topText}</p>
-		<p>{@html bottomText} <TextLink {href} text={linkText} /></p>
+		<p>{@html topText}</p>
+		{#if bottomText}
+			<p>
+				{@html bottomText}
+				{#if linkText && href}
+					<TextLink {href} text={linkText} />
+				{/if}
+			</p>
+		{/if}
+		{#if !bottomText && linkText && href}
+			<TextLink {href} text={linkText} />
+		{/if}
 	</div>
 	{#if !imgsLeft}<div class="imgs-container">
 			<img src={topImgSrc} alt={topImgAlt} />
@@ -48,6 +58,8 @@
 		width: calc(55% - 100px);
 
 		padding: 0 50px;
+
+		white-space: pre-line;
 	}
 
 	.texts-container h2 {

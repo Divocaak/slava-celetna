@@ -1,5 +1,4 @@
 <script>
-	import Navbar from '$lib//Navbar.svelte';
 	import DesignerTile from '$lib/DesignerTile.svelte';
 	import { onMount } from 'svelte';
 
@@ -10,33 +9,22 @@
 	});
 </script>
 
-<Navbar />
-
-<div class="wrapper">
-	<h1>our designers</h1>
-	<div class="holder">
-		{#each designers as entry}
-			<DesignerTile id={entry[0]} designer={entry[1]} />
-		{/each}
-	</div>
+<h1>our designers</h1>
+<div class="holder">
+	{#each designers as entry}
+		<DesignerTile id={entry[0]} designer={entry[1]} />
+	{/each}
 </div>
 
 <style>
-	.wrapper {
-		position: relative;
-		min-height: 100vh;
-
-		padding: var(--px) var(--py);
-	}
-
-	.wrapper h1 {
+	h1 {
 		text-align: center;
 	}
 
 	.holder {
 		position: relative;
 		display: grid;
-		gap: 10px;
+		gap: calc(var(--px) / 2);
 
 		grid-template-columns: repeat(3, 1fr);
 		/* grid-auto-rows: minmax(300px, auto); */
