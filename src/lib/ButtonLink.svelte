@@ -5,7 +5,7 @@
 	export let target;
 </script>
 
-<a {href} {target} class:uppercase={uppercase}>{label}</a>
+<a {href} {target} class:uppercase={uppercase}><slot></slot>{label}</a>
 
 <style>
 	a {

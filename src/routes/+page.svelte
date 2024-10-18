@@ -21,11 +21,7 @@ https://yoksel.github.io/relative-clip-path/ -->
 	</clipPath>
 </svg>
 
-<Navbar>
-	<ButtonLink label="concept store" href="#concept-store" />
-	<ButtonLink label="event space" href="#event-space" />
-	<ButtonLink label="creative hub" href="#creative-hub" />
-</Navbar>
+<Navbar />
 <div class="landing">
 	<div class="text-wrapper">
 		<h1>sláva!</h1>
@@ -39,7 +35,7 @@ https://yoksel.github.io/relative-clip-path/ -->
 	topText="Cutting-edge concept store in The very center in Prague."
 	bottomText="It is run by non profit and it supports and represents Czech designers and brands. Some of them young and thriving, some of them quite established. See more about our member designers"
 	linkText="here."
-	href="/"
+	href="/designers"
 	topImgSrc="/_placeholders/0.jpg"
 	bottomImgSrc="/_placeholders/1.jpg"
 />
@@ -49,7 +45,7 @@ https://yoksel.github.io/relative-clip-path/ -->
 	topText="We are holding events showcasing Czech fashion design like fashion shwos, pop-ups, networks etc."
 	bottomText="We also rent our unique and cariable space of 200 m<sup>2</sup> for private and public events like parties, press conferences, pop-ups and more. You can find more info about it at"
 	linkText="&quot;for rent&quot;."
-	href="/"
+	href="/rent"
 	topImgSrc="/_placeholders/0.jpg"
 	bottomImgSrc="/_placeholders/1.jpg"
 	imgsLeft={true}
@@ -60,7 +56,7 @@ https://yoksel.github.io/relative-clip-path/ -->
 	topText="We are holding events showcasing Czech fashion design like fashion shwos, pop-ups, networks etc."
 	bottomText="We also rent our unique and cariable space of 200 m<sup>2</sup> for private and public events like parties, press conferences, pop-ups and more. You can find more info about it at"
 	linkText="&quot;for rent&quot;."
-	href="/"
+	href="/rent"
 	topImgSrc="/_placeholders/0.jpg"
 	bottomImgSrc="/_placeholders/1.jpg"
 	imgsLeft={true}

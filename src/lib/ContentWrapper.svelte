@@ -22,8 +22,8 @@
 		</div>
 	{/if}
 	<div class="texts-container" class:left={imgsLeft}>
-		<h2>{title}</h2>
-		<p>{@html topText}</p>
+		<h1>{title}</h1>
+		{#if topText}<p>{@html topText}</p>{/if}
 		{#if bottomText}
 			<p>
 				{@html bottomText}
@@ -35,6 +35,7 @@
 		{#if !bottomText && linkText && href}
 			<TextLink {href} text={linkText} />
 		{/if}
+		<slot></slot>
 	</div>
 	{#if !imgsLeft}<div class="imgs-container">
 			<img src={topImgSrc} alt={topImgAlt} />
@@ -62,7 +63,7 @@
 		white-space: pre-line;
 	}
 
-	.texts-container h2 {
+	.texts-container h1 {
 		text-align: center;
 		text-transform: uppercase;
 	}
