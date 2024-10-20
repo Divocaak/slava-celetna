@@ -1,11 +1,24 @@
 <script>
 	import ButtonLink from '$lib/ButtonLink.svelte';
+	import DoodleWrapper from '../lib/doodles/DoodleWrapper.svelte';
+	import CurveDoodle from '../lib/doodles/CurveDoodle.svelte';
+	import LinesDoodle from '../lib/doodles/LinesDoodle.svelte';
 </script>
 
 <svelte:head>
 	<meta name="author" content="Vojtěch Divoký" />
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<link
+		rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+	/>
 </svelte:head>
+
+<DoodleWrapper>
+	<CurveDoodle /><LinesDoodle />
+	<CurveDoodle /><LinesDoodle />
+	<CurveDoodle /><LinesDoodle />
+</DoodleWrapper>
 
 <slot></slot>
 <p class="signature">
@@ -44,7 +57,7 @@
 		color: var(--white);
 	}
 
-	:global(h1, h2, h3){
+	:global(h1, h2, h3) {
 		text-transform: uppercase;
 	}
 
