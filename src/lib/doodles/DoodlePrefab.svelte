@@ -40,16 +40,18 @@
 		}
 	}
 
-	svg path {
-		position: relative;
-        display: block;
-        box-sizing: border-box;
+	svg {
+		position: absolute;
+		display: block;
+		box-sizing: border-box;
 
-		/* top: var(--top);
+		top: var(--top);
 		bottom: var(--bottom);
 		left: var(--left);
-		right: var(--right); */
+		right: var(--right);
+	}
 
+	svg path {
 		stroke: var(--white);
 		stroke-width: 20;
 

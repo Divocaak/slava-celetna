@@ -1,5 +1,10 @@
 <script>
 	import DesignerTile from '$lib/DesignerTile.svelte';
+	import DoodleWrapper from '$lib/doodles/DoodleWrapper.svelte';
+	import LinesAltDoodle from '$lib/doodles/LinesAltDoodle.svelte';
+	import LinesDoodle from '$lib/doodles/LinesDoodle.svelte';
+	import CurveAltDoodle from '$lib/doodles/CurveAltDoodle.svelte';
+	import LoopAltDoodle from '$lib/doodles/LoopAltDoodle.svelte';
 	import { onMount } from 'svelte';
 
 	let designers = [];
@@ -9,14 +14,27 @@
 	});
 </script>
 
-<h1>our designers</h1>
-<div class="holder">
-	{#each designers as entry}
-		<DesignerTile id={entry[0]} designer={entry[1]} />
-	{/each}
+<DoodleWrapper>
+	<CurveAltDoodle />
+	<LinesDoodle top="-10vh" right="-20vw" />
+	<LinesAltDoodle top="120vh" left="-20vw" />
+	<LoopAltDoodle top="60vh"/>
+</DoodleWrapper>
+
+<div class="wrapper">
+	<h1>our designers</h1>
+	<div class="holder">
+		{#each designers as entry}
+			<DesignerTile id={entry[0]} designer={entry[1]} />
+		{/each}
+	</div>
 </div>
 
 <style>
+	.wrapper {
+		padding: var(--py) var(--px);
+	}
+
 	h1 {
 		text-align: center;
 	}

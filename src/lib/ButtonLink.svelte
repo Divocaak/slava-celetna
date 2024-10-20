@@ -2,7 +2,7 @@
 	export let href;
 	export let label;
 	export let uppercase = true;
-	export let target;
+	export let target = "_self";
 </script>
 
 <a {href} {target} class:uppercase={uppercase}><slot></slot>{label}</a>

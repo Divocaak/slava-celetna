@@ -1,8 +1,6 @@
 <script>
+	import Navbar from '$lib//Navbar.svelte';
 	import ButtonLink from '$lib/ButtonLink.svelte';
-	import DoodleWrapper from '../lib/doodles/DoodleWrapper.svelte';
-	import CurveDoodle from '../lib/doodles/CurveDoodle.svelte';
-	import LinesDoodle from '../lib/doodles/LinesDoodle.svelte';
 </script>
 
 <svelte:head>
@@ -14,21 +12,19 @@
 	/>
 </svelte:head>
 
-<DoodleWrapper>
-	<CurveDoodle /><LinesDoodle />
-	<CurveDoodle /><LinesDoodle />
-	<CurveDoodle /><LinesDoodle />
-</DoodleWrapper>
+<Navbar />
 
-<slot></slot>
-<p class="signature">
-	Developed by<ButtonLink
-		label="Vojtěch Divoký"
-		href="https://divokyvojtech.cz"
-		target="_blank"
-		uppercase={false}
-	/>&copy; 2024
-</p>
+<div class="wrapper">
+	<slot />
+	<p class="signature">
+		Developed by<ButtonLink
+			label="Vojtěch Divoký"
+			href="https://divokyvojtech.cz"
+			target="_blank"
+			uppercase={false}
+		/>&copy; 2024
+	</p>
+</div>
 
 <style>
 	:global(:root) {
@@ -37,7 +33,7 @@
 		--white: #ffffff;
 
 		--py: 10vh;
-		--px: 5vw;
+		--px: 10vw;
 	}
 
 	:global(body) {
@@ -58,15 +54,36 @@
 	}
 
 	:global(h1, h2, h3) {
+		font-weight: 600;
+		font-size: calc(1.536vw + 59px / 2);
+		/* line-height: 71px; */
+
 		text-transform: uppercase;
 	}
 
-	.signature {
-		font-size: 0.75em;
+	:global(p) {
+		font-weight: 300;
+		font-size: calc(0.938vw + 36px / 2);
+		/* line-height: 44px; */
+		letter-spacing: -0.04em;
+	}
+
+	.wrapper {
 		position: relative;
+		min-height: 100vh;
+		height: auto;
+	}
+
+	.signature {
+		position: absolute;
 		right: 10px;
+		bottom: 0;
+
 		width: 100%;
+
+		font-size: 0.75em;
 		text-align: end;
+
 		margin: 0;
 	}
 </style>

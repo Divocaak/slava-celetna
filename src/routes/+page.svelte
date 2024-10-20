@@ -1,7 +1,11 @@
 <script>
 	import ContentWrapper from '$lib/ContentWrapper.svelte';
-	import Navbar from '$lib//Navbar.svelte';
 	import ButtonLink from '$lib/ButtonLink.svelte';
+	import DoodleWrapper from '$lib/doodles/DoodleWrapper.svelte';
+	import LinesAltDoodle from '$lib/doodles/LinesAltDoodle.svelte';
+	import LinesDoodle from '$lib/doodles/LinesDoodle.svelte';
+	import CurveDoodle from '$lib/doodles/CurveDoodle.svelte';
+	import LoopDoodle from '$lib/doodles/LoopDoodle.svelte';
 
 	/* TODO delete static/reference/ */
 </script>
@@ -11,23 +15,24 @@ https://yoksel.github.io/relative-clip-path/ -->
 <svg class="clip-path-svg" width="0" height="0">
 	<clipPath id="clip-path" clipPathUnits="objectBoundingBox">
 		<path
-			d="m0,0
-            s0.465,0,0.465,0
-            c0.016,0.2,0.16,0.18,0.353,0.24
-            c0.321,0.1,0.136,0.25,0.056,0.26
-            c-0.168,0.1,-0.377,0.1,-0.072,0.31
-            c0.104,0.08,0.088,0.16,-0.802,0.19"
+			d="m0 0s.465 0 .465 0c.016.2.16.18.353.24.321.1.128.234.059.262-.2.093-.377.1-.072.31.104.08.088.16-.802.19"
 		></path>
 	</clipPath>
 </svg>
 
-<Navbar />
 <div class="landing">
 	<div class="text-wrapper">
 		<h1>sláva!</h1>
 		<p>where fashion meets people</p>
 	</div>
 </div>
+
+<DoodleWrapper>
+	<CurveDoodle top="10vh"/>
+	<LoopDoodle top="80vh" left="-5vw"/>
+	<LinesDoodle right="-30vw" top="250vh" />
+	<CurveDoodle top="310vh"/>
+</DoodleWrapper>
 
 <ContentWrapper
 	id="concept-store"
@@ -151,8 +156,6 @@ https://yoksel.github.io/relative-clip-path/ -->
 	}
 
 	.contact {
-		height: calc(100vh - 2 * var(--py));
-
 		padding: var(--py) var(--px);
 	}
 

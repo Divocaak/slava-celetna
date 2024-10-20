@@ -21,21 +21,24 @@
 			<img src={bottomImgSrc} alt={bottomImgAlt} />
 		</div>
 	{/if}
-	<div class="texts-container" class:left={imgsLeft}>
+	<div class="content-container" class:left={imgsLeft}>
 		<h1>{title}</h1>
-		{#if topText}<p>{@html topText}</p>{/if}
-		{#if bottomText}
-			<p>
-				{@html bottomText}
-				{#if linkText && href}
-					<TextLink {href} text={linkText} />
+		{#if topText || bottomText || (linkText && href)}
+			<div class="texts-container">
+				{#if topText}<p>{@html topText}</p>{/if}
+				{#if bottomText}
+					<p>
+						{@html bottomText}
+						{#if linkText && href}
+							<TextLink {href} text={linkText} />
+						{/if}
+					</p>
 				{/if}
-			</p>
+			</div>
 		{/if}
-		{#if !bottomText && linkText && href}
-			<TextLink {href} text={linkText} />
-		{/if}
-		<slot></slot>
+		<div>
+			<slot></slot>
+		</div>
 	</div>
 	{#if !imgsLeft}<div class="imgs-container">
 			<img src={topImgSrc} alt={topImgAlt} />
@@ -55,17 +58,25 @@
 		overflow: hidden;
 	}
 
-	.texts-container {
+	.content-container {
 		width: calc(55% - 100px);
 
 		padding: 0 50px;
 
 		white-space: pre-line;
+
+		display: flex;
+		flex-direction: column;
 	}
 
-	.texts-container h1 {
+	.content-container h1 {
 		text-align: center;
 		text-transform: uppercase;
+	}
+
+	.texts-container {
+		position: relative;
+		height: 100%;
 	}
 
 	.imgs-container {

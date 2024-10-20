@@ -1,6 +1,9 @@
 <script>
 	import ContentWrapper from '$lib/ContentWrapper.svelte';
 	import PublicityRow from '$lib/PublicityRow.svelte';
+	import DoodleWrapper from '$lib/doodles/DoodleWrapper.svelte';
+	import LinesAltDoodle from '$lib/doodles/LinesAltDoodle.svelte';
+	import CurveDoodle from '$lib/doodles/CurveDoodle.svelte';
 	import { onMount } from 'svelte';
 
 	let publicity = [];
@@ -9,6 +12,11 @@
 		publicity = await res.json();
 	});
 </script>
+
+<DoodleWrapper>
+	<CurveDoodle top="30vh"/>
+	<LinesAltDoodle top="40vh" right="-20vw" />
+</DoodleWrapper>
 
 <ContentWrapper
 	id="about-panel"
@@ -28,6 +36,10 @@
 </div>
 
 <style>
+	.holder {
+		padding: var(--py) var(--px);
+	}
+
 	h1 {
 		text-align: center;
 	}

@@ -1,5 +1,9 @@
 <script>
 	import DoodlePrefab from '$lib/doodles/DoodlePrefab.svelte';
+	export let top = 'auto';
+	export let bottom = 'auto';
+	export let left = 'auto';
+	export let right = 'auto';
 </script>
 
 <DoodlePrefab
@@ -7,4 +11,8 @@
 	positionSvg="M4 10C232.134 96.9818 227.5 383.5 180 563C132.5 742.5 152.376 807.668 219.5 1025C259.939 1132.11 293.808 1199.67 358.5 1173.5C384.5 1162.98 392.9 1102.98 344.5 1063C298.5 1025 222.606 979.71 153 1025C8.5 1119.02 107 1516 383 1772"
 	w="401"
 	h="1780"
+	{top}
+	{bottom}
+	{left}
+	{right}
 />
