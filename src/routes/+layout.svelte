@@ -27,6 +27,30 @@
 </div>
 
 <style>
+	/* Amiamie Black */
+	@font-face {
+		font-family: 'Amiamie';
+		src: url('/fonts/Amiamie-Black.ttf') format('truetype');
+		font-weight: 900; /* Black */
+		font-style: normal;
+	}
+
+	/* Amiamie Light */
+	@font-face {
+		font-family: 'Amiamie';
+		src: url('/fonts/Amiamie-Light.ttf') format('truetype');
+		font-weight: 300; /* Light */
+		font-style: normal;
+	}
+
+	/* Eilis Regular */
+	@font-face {
+		font-family: 'Eilis';
+		src: url('/fonts/Eilis-Regular.ttf') format('truetype');
+		font-weight: 400; /* Regular */
+		font-style: normal;
+	}
+
 	:global(:root) {
 		--green: #8dcaa9;
 		--pink: #e795b6;
@@ -34,6 +58,17 @@
 
 		--py: 10vh;
 		--px: 10vw;
+	}
+
+	:global(.eilis){
+		font-family: 'Eilis', Arial, Helvetica, sans-serif;
+	}
+	:global(.amiamie){
+		font-family: 'Amiamie', Arial, Helvetica, sans-serif;
+	}
+	:global(.amiamie-black){
+		font-family: 'Amiamie', Arial, Helvetica, sans-serif;
+		font-weight: 900;
 	}
 
 	:global(body) {

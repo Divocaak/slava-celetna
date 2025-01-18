@@ -22,8 +22,8 @@ https://yoksel.github.io/relative-clip-path/ -->
 
 <div class="landing">
 	<div class="text-wrapper">
-		<h1>sláva!</h1>
-		<p>where fashion meets people</p>
+		<h1 class="eilis">sláva!</h1>
+		<p class="amiamie-black">where fashion meets people</p>
 	</div>
 </div>
 
