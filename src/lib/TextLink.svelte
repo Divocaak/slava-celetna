@@ -3,7 +3,7 @@
 	export let href;
 </script>
 
-<a {href}>
+<a {href} class="amiamie-black">
 	{text}
 	<svg viewBox="0 0 70 36">
 		<path

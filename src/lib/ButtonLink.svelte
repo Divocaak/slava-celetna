@@ -5,7 +5,7 @@
 	export let target = "_self";
 </script>
 
-<a {href} {target} class:uppercase={uppercase}><slot></slot>{label}</a>
+<a {href} {target} class="amiamie-black" class:uppercase={uppercase}><slot></slot>{label}</a>
 
 <style>
 	a {

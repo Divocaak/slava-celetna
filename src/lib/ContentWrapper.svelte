@@ -22,9 +22,9 @@
 		</div>
 	{/if}
 	<div class="content-container" class:left={imgsLeft}>
-		<h1>{title}</h1>
+		<h1 class="eilis">{title}</h1>
 		{#if topText || bottomText || (linkText && href)}
-			<div class="texts-container">
+			<div class="texts-container amiamie">
 				{#if topText}<p>{@html topText}</p>{/if}
 				{#if bottomText}
 					<p>

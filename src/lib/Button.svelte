@@ -2,7 +2,11 @@
 	export let label;
 </script>
 
-<button on:click><slot name="icon-pre" />{label}<slot name="icon-post" /></button>
+<button on:click>
+	<span class="amiamie-black">
+		<slot name="icon-pre" />{label}<slot name="icon-post" />
+	</span>
+</button>
 
 <style>
 	button {
