@@ -10,9 +10,12 @@
 <style>
 	a {
 		position: relative;
+		width: max-content;
+		
+		padding: 0 5px;
+		
 		color: var(--white);
 		text-decoration: none;
-		padding: 0 5px;
 	}
 	
 	.uppercase{

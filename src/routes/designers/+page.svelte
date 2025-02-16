@@ -22,7 +22,7 @@
 </DoodleWrapper>
 
 <div class="wrapper">
-	<h1>our designers</h1>
+	<h1 class="eilis">our designers</h1>
 	<div class="holder">
 		{#each designers as entry}
 			<DesignerTile id={entry[0]} designer={entry[1]} />

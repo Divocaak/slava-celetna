@@ -91,9 +91,14 @@
 		pointer-events: all;
 	}
 
-	.imgs-container img:hover {
+	.imgs-container:has(img:hover) img:first-of-type {
+		transform: scale(1.05) rotate(-2deg);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+	
+	.imgs-container:has(img:hover) img:last-of-type {
 		transform: scale(1.05) rotate(2deg);
-		z-index: 2;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 	}
 
 	.imgs-container img:first-of-type {
@@ -118,8 +123,13 @@
 		transform: scaleX(-1);
 	}
 
-	.imgs-container.left img:hover {
+	.imgs-container.left:has(img:hover) img:first-of-type {
+		transform: scaleX(-1.05) scaleY(1.05) rotate(2deg);
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+	}
+
+	.imgs-container.left:has(img:hover) img:last-of-type {
 		transform: scaleX(-1.05) scaleY(1.05) rotate(-2deg);
-		z-index: 2;
+		box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
 	}
 </style>
