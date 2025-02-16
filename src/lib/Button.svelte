@@ -17,6 +17,8 @@
 		text-transform: uppercase;
 		text-decoration: none;
 		padding: 0 5px;
+
+		font-size: var(--fs-20);
 	}
 
 	button::before {

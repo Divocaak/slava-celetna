@@ -16,13 +16,8 @@
 
 <div class="wrapper">
 	<slot />
-	<p class="signature">
-		Developed by<ButtonLink
-			label="Vojtěch Divoký"
-			href="https://divokyvojtech.cz"
-			target="_blank"
-			uppercase={false}
-		/>&copy; 2024
+	<p class="signature amiamie">
+		Developed by <a href="https://divokyvojtech.cz" target="_blank">Vojtěch Divoký</a> &copy; 2025
 	</p>
 </div>
 
@@ -136,5 +131,14 @@
 		text-align: end;
 
 		margin: 0;
+		
+		color: color-mix(in srgb, var(--white) 60%, var(--pink) 30%);
+		pointer-events: none;
+	}
+	
+	.signature a{
+		pointer-events: all;
+		text-decoration: none;
+		color: color-mix(in srgb, var(--white) 70%, var(--pink) 100%);
 	}
 </style>

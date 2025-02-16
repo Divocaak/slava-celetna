@@ -16,6 +16,8 @@
 		
 		color: var(--white);
 		text-decoration: none;
+
+		font-size: var(--fs-20);
 	}
 	
 	.uppercase{
